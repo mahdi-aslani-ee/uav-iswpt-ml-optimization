@@ -1,0 +1,31 @@
+altitude_m,closed_form_evaluations,gap_to_audit_percent,method,model,objective,outer_method,p7_evaluations,pso_seed,rho,sdp_solves
+50.0,,250.2938371218289,Fixed Hmin (P2 exact),,0.48817448348118,,,,0.1,1
+250.0,,198.45424676397514,Fixed Hmax (P2 exact),,0.4159300915879256,,,,0.1,1
+111.0,,0.0,Algorithm 1 audit optimum,,0.1393614251087716,2 m global fast scan + 1 m exact local refinement,,,0.1,17
+111.0,201,3.12085674714909,Algorithm 2 deterministic audit,,0.14371069554720184,1 m exhaustive altitude audit (not paper PSO),201,,0.1,
+110.72809282148137,,3.112436786965386,Kang Algorithm 2 PSO (seed 0),,0.14369896137069624,,73,0,0.1,
+112.93197658282557,,0.2979282733901642,SVR altitude + one exact P2 solve,"Final corrected RBF SVR, locked hyperparameters",0.1397766221963701,,,,0.1,1
+50.0,,54.47425471087121,Fixed Hmin (P2 exact),,0.4693288084077377,,,,0.3,1
+250.0,,56.50973502827241,Fixed Hmax (P2 exact),,0.47551307227546996,,,,0.3,1
+116.0,,0.0,Algorithm 1 audit optimum,,0.30382331948205765,2 m global fast scan + 1 m exact local refinement,,,0.3,17
+116.0,201,1.7566473191752965,Algorithm 2 deterministic audit,,0.3091604236787686,1 m exhaustive altitude audit (not paper PSO),201,,0.3,
+115.02542268423288,,1.7817058007149484,Kang Algorithm 2 PSO (seed 0),,0.3092365571891942,,73,0,0.3,
+118.5018654282949,,0.1914232723404912,SVR altitude + one exact P2 solve,"Final corrected RBF SVR, locked hyperparameters",0.3044049080223437,,,,0.3,1
+50.0,,19.912243020493282,Fixed Hmin (P2 exact),,0.4440176193872691,,,,0.5,1
+250.0,,26.316978157951507,Fixed Hmax (P2 exact),,0.4677334233527923,,,,0.5,1
+124.0,,0.0,Algorithm 1 audit optimum,,0.3702854756135163,2 m global fast scan + 1 m exact local refinement,,,0.5,17
+124.0,201,0.9098920724666386,Algorithm 2 deterministic audit,,0.3736546738016191,1 m exhaustive altitude audit (not paper PSO),201,,0.5,
+124.08875388528148,,0.9098885938652532,Kang Algorithm 2 PSO (seed 0),,0.3736546609208634,,73,0,0.5,
+123.42890468428182,,-0.0021453652955503726,SVR altitude + one exact P2 solve,"Final corrected RBF SVR, locked hyperparameters",0.37027753163742805,,,,0.5,1
+50.0,,8.064007787541867,Fixed Hmin (P2 exact),,0.40948923736547577,,,,0.7,1
+250.0,,13.48969293201497,Fixed Hmax (P2 exact),,0.4300489011932652,,,,0.7,1
+133.0,,0.0,Algorithm 1 audit optimum,,0.3789321215723813,2 m global fast scan + 1 m exact local refinement,,,0.7,17
+133.0,199,0.51621712220188,Algorithm 2 deterministic audit,,0.3808882340654608,1 m exhaustive altitude audit (not paper PSO),201,,0.7,
+132.00965710696823,,0.5185768544217382,Kang Algorithm 2 PSO (seed 0),,0.38089717584882493,,73,0,0.7,
+126.7182434277265,,0.14638913520324598,SVR altitude + one exact P2 solve,"Final corrected RBF SVR, locked hyperparameters",0.37948683702815844,,,,0.7,1
+50.0,,2.369398106567514,Fixed Hmin (P2 exact),,0.3597500091644453,,,,0.9,1
+250.0,,4.353581723310886,Fixed Hmax (P2 exact),,0.3667228944945347,,,,0.9,1
+138.0,,0.0,Algorithm 1 audit optimum,,0.35142339001538536,2 m global fast scan + 1 m exact local refinement,,,0.9,17
+138.0,184,0.232915165402316,Algorithm 2 deterministic audit,,0.3522419083855021,1 m exhaustive altitude audit (not paper PSO),201,,0.9,
+137.11647890186163,,0.23317587625600603,Kang Algorithm 2 PSO (seed 0),,0.3522428245844223,,73,0,0.9,
+127.90179922311891,,0.12642756076840636,SVR altitude + one exact P2 solve,"Final corrected RBF SVR, locked hyperparameters",0.35186768603535146,,,,0.9,1

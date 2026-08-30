@@ -1,0 +1,1148 @@
+{
+  "scenario": {
+    "target_angles_deg": [
+      -40.0,
+      0.0,
+      40.0
+    ],
+    "r_m": [
+      50.0,
+      150.0
+    ],
+    "phi_deg": [
+      -20.0,
+      20.0
+    ],
+    "pdes": [
+      0.0002899502011535613,
+      3.064653712873213e-05
+    ],
+    "angle_resolution_deg": 0.1
+  },
+  "fidelity": {
+    "reference_sdp_is_dcp": true,
+    "reference_sdp_is_dpp": true,
+    "algorithm2_equations": [
+      37,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      51,
+      52,
+      55,
+      56,
+      59
+    ],
+    "algorithm2_pso": {
+      "sigma": 0.7,
+      "z1": 2.0,
+      "z2": 2.0,
+      "M": 8,
+      "J": 8
+    },
+    "algorithm1_audit_deviation": "deterministic scan/refinement instead of paper PSO"
+  },
+  "svr": {
+    "train_count": 800,
+    "held_out_count": 200,
+    "split_seed": 42,
+    "C": 300.0,
+    "gamma": 0.03,
+    "epsilon": 4.0,
+    "preprocessing": "EHDs canonicalised by ascending r with phi kept paired"
+  },
+  "software": {
+    "python": "3.11.3",
+    "numpy": "2.2.6",
+    "cvxpy": "1.9.2",
+    "sklearn": "1.7.1",
+    "platform": "Windows-10-10.0.26200-SP0"
+  },
+  "wall_seconds": 292.009477900001,
+  "rows": [
+    {
+      "method": "Fixed Hmin (P2 exact)",
+      "rho": 0.1,
+      "objective": 0.4913083600058683,
+      "altitude_m": 50.0,
+      "sdp_solves": 1,
+      "gap_to_audit_percent": 250.11341935409348
+    },
+    {
+      "method": "Fixed Hmax (P2 exact)",
+      "rho": 0.1,
+      "objective": 0.41691633587417565,
+      "altitude_m": 250.0,
+      "sdp_solves": 1,
+      "gap_to_audit_percent": 197.10059062651382
+    },
+    {
+      "method": "Algorithm 1 audit optimum",
+      "rho": 0.1,
+      "objective": 0.14032834300160738,
+      "altitude_m": 111.0,
+      "sdp_solves": 17,
+      "outer_method": "2 m global fast scan + 1 m exact local refinement",
+      "gap_to_audit_percent": 0.0
+    },
+    {
+      "method": "Algorithm 2 deterministic audit",
+      "rho": 0.1,
+      "objective": 0.14465643499138556,
+      "altitude_m": 111.0,
+      "p7_evaluations": 201,
+      "closed_form_evaluations": 201,
+      "outer_method": "1 m exhaustive altitude audit (not paper PSO)",
+      "gap_to_audit_percent": 3.0842607396344777
+    },
+    {
+      "method": "Kang Algorithm 2 PSO (seed 0)",
+      "rho": 0.1,
+      "objective": 0.14464207934356998,
+      "altitude_m": 110.5635654848693,
+      "p7_evaluations": 73,
+      "pso_seed": 0,
+      "gap_to_audit_percent": 3.074030698070167
+    },
+    {
+      "method": "SVR altitude + one exact P2 solve",
+      "rho": 0.1,
+      "objective": 0.14075835631470995,
+      "altitude_m": 112.93197658282557,
+      "sdp_solves": 1,
+      "model": "Final corrected RBF SVR, locked hyperparameters",
+      "gap_to_audit_percent": 0.30643368538717297
+    },
+    {
+      "method": "Fixed Hmin (P2 exact)",
+      "rho": 0.3,
+      "objective": 0.47991644038376424,
+      "altitude_m": 50.0,
+      "sdp_solves": 1,
+      "gap_to_audit_percent": 55.37046222717973
+    },
+    {
+      "method": "Fixed Hmax (P2 exact)",
+      "rho": 0.3,
+      "objective": 0.482528498003239,
+      "altitude_m": 250.0,
+      "sdp_solves": 1,
+      "gap_to_audit_percent": 56.216102354401244
+    },
+    {
+      "method": "Algorithm 1 audit optimum",
+      "rho": 0.3,
+      "objective": 0.30888524981153725,
+      "altitude_m": 116.0,
+      "sdp_solves": 17,
+      "outer_method": "2 m global fast scan + 1 m exact local refinement",
+      "gap_to_audit_percent": 0.0
+    },
+    {
+      "method": "Algorithm 2 deterministic audit",
+      "rho": 0.3,
+      "objective": 0.3141277232043246,
+      "altitude_m": 116.0,
+      "p7_evaluations": 201,
+      "closed_form_evaluations": 201,
+      "outer_method": "1 m exhaustive altitude audit (not paper PSO)",
+      "gap_to_audit_percent": 1.6972236116764923
+    },
+    {
+      "method": "Kang Algorithm 2 PSO (seed 0)",
+      "rho": 0.3,
+      "objective": 0.3141664993632068,
+      "altitude_m": 115.02542268423288,
+      "p7_evaluations": 73,
+      "pso_seed": 0,
+      "gap_to_audit_percent": 1.7097771923042049
+    },
+    {
+      "method": "SVR altitude + one exact P2 solve",
+      "rho": 0.3,
+      "objective": 0.30956031211388463,
+      "altitude_m": 118.5018654282949,
+      "sdp_solves": 1,
+      "model": "Final corrected RBF SVR, locked hyperparameters",
+      "gap_to_audit_percent": 0.21854792443448007
+    },
+    {
+      "method": "Fixed Hmin (P2 exact)",
+      "rho": 0.5,
+      "objective": 0.4628114542254026,
+      "altitude_m": 50.0,
+      "sdp_solves": 1,
+      "gap_to_audit_percent": 20.707773907351857
+    },
+    {
+      "method": "Fixed Hmax (P2 exact)",
+      "rho": 0.5,
+      "objective": 0.48348938937511965,
+      "altitude_m": 250.0,
+      "sdp_solves": 1,
+      "gap_to_audit_percent": 26.10087189171443
+    },
+    {
+      "method": "Algorithm 1 audit optimum",
+      "rho": 0.5,
+      "objective": 0.3834147870050435,
+      "altitude_m": 123.0,
+      "sdp_solves": 17,
+      "outer_method": "2 m global fast scan + 1 m exact local refinement",
+      "gap_to_audit_percent": 0.0
+    },
+    {
+      "method": "Algorithm 2 deterministic audit",
+      "rho": 0.5,
+      "objective": 0.38666378387995226,
+      "altitude_m": 123.0,
+      "p7_evaluations": 201,
+      "closed_form_evaluations": 201,
+      "outer_method": "1 m exhaustive altitude audit (not paper PSO)",
+      "gap_to_audit_percent": 0.8473843432819983
+    },
+    {
+      "method": "Kang Algorithm 2 PSO (seed 0)",
+      "rho": 0.5,
+      "objective": 0.38668550852613637,
+      "altitude_m": 124.08875388528148,
+      "p7_evaluations": 73,
+      "pso_seed": 0,
+      "gap_to_audit_percent": 0.8530504383102585
+    },
+    {
+      "method": "SVR altitude + one exact P2 solve",
+      "rho": 0.5,
+      "objective": 0.3834295353942855,
+      "altitude_m": 123.42890468428182,
+      "sdp_solves": 1,
+      "model": "Final corrected RBF SVR, locked hyperparameters",
+      "gap_to_audit_percent": 0.003846588535925937
+    },
+    {
+      "method": "Fixed Hmin (P2 exact)",
+      "rho": 0.7,
+      "objective": 0.43769654091965715,
+      "altitude_m": 50.0,
+      "sdp_solves": 1,
+      "gap_to_audit_percent": 8.471123849547142
+    },
+    {
+      "method": "Fixed Hmax (P2 exact)",
+      "rho": 0.7,
+      "objective": 0.4565926166474576,
+      "altitude_m": 250.0,
+      "sdp_solves": 1,
+      "gap_to_audit_percent": 13.153999721113372
+    },
+    {
+      "method": "Algorithm 1 audit optimum",
+      "rho": 0.7,
+      "objective": 0.40351434131608704,
+      "altitude_m": 131.0,
+      "sdp_solves": 17,
+      "outer_method": "2 m global fast scan + 1 m exact local refinement",
+      "gap_to_audit_percent": 0.0
+    },
+    {
+      "method": "Algorithm 2 deterministic audit",
+      "rho": 0.7,
+      "objective": 0.40520323697851557,
+      "altitude_m": 131.0,
+      "p7_evaluations": 201,
+      "closed_form_evaluations": 201,
+      "outer_method": "1 m exhaustive altitude audit (not paper PSO)",
+      "gap_to_audit_percent": 0.4185466263528792
+    },
+    {
+      "method": "Kang Algorithm 2 PSO (seed 0)",
+      "rho": 0.7,
+      "objective": 0.40520455373405173,
+      "altitude_m": 132.00965710696823,
+      "p7_evaluations": 73,
+      "pso_seed": 0,
+      "gap_to_audit_percent": 0.41887294822086235
+    },
+    {
+      "method": "SVR altitude + one exact P2 solve",
+      "rho": 0.7,
+      "objective": 0.40384659655617544,
+      "altitude_m": 126.7182434277265,
+      "sdp_solves": 1,
+      "model": "Final corrected RBF SVR, locked hyperparameters",
+      "gap_to_audit_percent": 0.08234037952770801
+    },
+    {
+      "method": "Fixed Hmin (P2 exact)",
+      "rho": 0.9,
+      "objective": 0.399450528401322,
+      "altitude_m": 50.0,
+      "sdp_solves": 1,
+      "gap_to_audit_percent": 2.431155490879132
+    },
+    {
+      "method": "Fixed Hmax (P2 exact)",
+      "rho": 0.9,
+      "objective": 0.4061799216390263,
+      "altitude_m": 250.0,
+      "sdp_solves": 1,
+      "gap_to_audit_percent": 4.156774750538811
+    },
+    {
+      "method": "Algorithm 1 audit optimum",
+      "rho": 0.9,
+      "objective": 0.3899697572355226,
+      "altitude_m": 136.0,
+      "sdp_solves": 17,
+      "outer_method": "2 m global fast scan + 1 m exact local refinement",
+      "gap_to_audit_percent": 0.0
+    },
+    {
+      "method": "Algorithm 2 deterministic audit",
+      "rho": 0.9,
+      "objective": 0.3905679439965396,
+      "altitude_m": 136.0,
+      "p7_evaluations": 201,
+      "closed_form_evaluations": 186,
+      "outer_method": "1 m exhaustive altitude audit (not paper PSO)",
+      "gap_to_audit_percent": 0.15339311572711326
+    },
+    {
+      "method": "Kang Algorithm 2 PSO (seed 0)",
+      "rho": 0.9,
+      "objective": 0.3905670337873096,
+      "altitude_m": 136.34596081462524,
+      "p7_evaluations": 73,
+      "pso_seed": 0,
+      "gap_to_audit_percent": 0.15315971064553982
+    },
+    {
+      "method": "SVR altitude + one exact P2 solve",
+      "rho": 0.9,
+      "objective": 0.39032703625197135,
+      "altitude_m": 127.90179922311937,
+      "sdp_solves": 1,
+      "model": "Final corrected RBF SVR, locked hyperparameters",
+      "gap_to_audit_percent": 0.09161710871671414
+    }
+  ],
+  "algorithm2_pso_repeatability": {
+    "0.1": [
+      {
+        "seed": 0,
+        "objective": 0.14464207934356998,
+        "altitude": 110.5635654848693,
+        "p7_evaluations": 73,
+        "closed_form_evaluations": 65
+      },
+      {
+        "seed": 1,
+        "objective": 0.1446521427790393,
+        "altitude": 110.31530042052044,
+        "p7_evaluations": 73,
+        "closed_form_evaluations": 62
+      },
+      {
+        "seed": 2,
+        "objective": 0.14464641946323087,
+        "altitude": 110.41643358631242,
+        "p7_evaluations": 73,
+        "closed_form_evaluations": 63
+      },
+      {
+        "seed": 3,
+        "objective": 0.14465353741454767,
+        "altitude": 110.96121921065809,
+        "p7_evaluations": 73,
+        "closed_form_evaluations": 69
+      },
+      {
+        "seed": 4,
+        "objective": 0.144644060021706,
+        "altitude": 110.47710685947906,
+        "p7_evaluations": 73,
+        "closed_form_evaluations": 69
+      },
+      {
+        "seed": 5,
+        "objective": 0.1446429350738201,
+        "altitude": 110.51742006662202,
+        "p7_evaluations": 73,
+        "closed_form_evaluations": 70
+      },
+      {
+        "seed": 6,
+        "objective": 0.14464286904249088,
+        "altitude": 110.52026299277657,
+        "p7_evaluations": 73,
+        "closed_form_evaluations": 69
+      },
+      {
+        "seed": 7,
+        "objective": 0.1446800885460388,
+        "altitude": 110.03325698224509,
+        "p7_evaluations": 73,
+        "closed_form_evaluations": 62
+      },
+      {
+        "seed": 8,
+        "objective": 0.1446421813426964,
+        "altitude": 110.55644700994085,
+        "p7_evaluations": 73,
+        "closed_form_evaluations": 68
+      },
+      {
+        "seed": 9,
+        "objective": 0.1459050536690102,
+        "altitude": 107.36344181751107,
+        "p7_evaluations": 73,
+        "closed_form_evaluations": 56
+      }
+    ],
+    "0.3": [
+      {
+        "seed": 0,
+        "objective": 0.3141664993632068,
+        "altitude": 115.02542268423288,
+        "p7_evaluations": 73,
+        "closed_form_evaluations": 67
+      },
+      {
+        "seed": 1,
+        "objective": 0.31413060000311,
+        "altitude": 115.4221099737152,
+        "p7_evaluations": 73,
+        "closed_form_evaluations": 67
+      },
+      {
+        "seed": 2,
+        "objective": 0.3141832757652131,
+        "altitude": 116.59365859321449,
+        "p7_evaluations": 73,
+        "closed_form_evaluations": 71
+      },
+      {
+        "seed": 3,
+        "objective": 0.31414705384227387,
+        "altitude": 116.28378819222172,
+        "p7_evaluations": 73,
+        "closed_form_evaluations": 71
+      },
+      {
+        "seed": 4,
+        "objective": 0.3141316437269669,
+        "altitude": 116.07704131440832,
+        "p7_evaluations": 73,
+        "closed_form_evaluations": 70
+      },
+      {
+        "seed": 5,
+        "objective": 0.3141311182035051,
+        "altitude": 115.41285084735006,
+        "p7_evaluations": 73,
+        "closed_form_evaluations": 71
+      },
+      {
+        "seed": 6,
+        "objective": 0.3141220242428964,
+        "altitude": 115.77645866384701,
+        "p7_evaluations": 73,
+        "closed_form_evaluations": 65
+      },
+      {
+        "seed": 7,
+        "objective": 0.31420269765640957,
+        "altitude": 116.72131817979859,
+        "p7_evaluations": 73,
+        "closed_form_evaluations": 67
+      },
+      {
+        "seed": 8,
+        "objective": 0.31412190284185526,
+        "altitude": 115.73903096972089,
+        "p7_evaluations": 73,
+        "closed_form_evaluations": 69
+      },
+      {
+        "seed": 9,
+        "objective": 0.31454398622627194,
+        "altitude": 118.02411796675914,
+        "p7_evaluations": 73,
+        "closed_form_evaluations": 59
+      }
+    ],
+    "0.5": [
+      {
+        "seed": 0,
+        "objective": 0.38668550852613637,
+        "altitude": 124.08875388528148,
+        "p7_evaluations": 73,
+        "closed_form_evaluations": 69
+      },
+      {
+        "seed": 1,
+        "objective": 0.3866614860296682,
+        "altitude": 123.41219878937338,
+        "p7_evaluations": 73,
+        "closed_form_evaluations": 70
+      },
+      {
+        "seed": 2,
+        "objective": 0.38667138020245073,
+        "altitude": 123.80680027752841,
+        "p7_evaluations": 73,
+        "closed_form_evaluations": 71
+      },
+      {
+        "seed": 3,
+        "objective": 0.3866917545141624,
+        "altitude": 122.38902361479174,
+        "p7_evaluations": 73,
+        "closed_form_evaluations": 72
+      },
+      {
+        "seed": 4,
+        "objective": 0.3866632590706526,
+        "altitude": 123.5321986976328,
+        "p7_evaluations": 73,
+        "closed_form_evaluations": 66
+      },
+      {
+        "seed": 5,
+        "objective": 0.3866636477789017,
+        "altitude": 123.55159965656091,
+        "p7_evaluations": 73,
+        "closed_form_evaluations": 71
+      },
+      {
+        "seed": 6,
+        "objective": 0.38666133177439393,
+        "altitude": 123.1603791483435,
+        "p7_evaluations": 73,
+        "closed_form_evaluations": 70
+      },
+      {
+        "seed": 7,
+        "objective": 0.3866608342371295,
+        "altitude": 123.30847283337644,
+        "p7_evaluations": 73,
+        "closed_form_evaluations": 67
+      },
+      {
+        "seed": 8,
+        "objective": 0.38666083060090806,
+        "altitude": 123.3068669093154,
+        "p7_evaluations": 73,
+        "closed_form_evaluations": 68
+      },
+      {
+        "seed": 9,
+        "objective": 0.3866608393241501,
+        "altitude": 123.24565457952956,
+        "p7_evaluations": 73,
+        "closed_form_evaluations": 64
+      }
+    ],
+    "0.7": [
+      {
+        "seed": 0,
+        "objective": 0.40520455373405173,
+        "altitude": 132.00965710696823,
+        "p7_evaluations": 73,
+        "closed_form_evaluations": 70
+      },
+      {
+        "seed": 1,
+        "objective": 0.4051999674516486,
+        "altitude": 131.52556645956358,
+        "p7_evaluations": 73,
+        "closed_form_evaluations": 65
+      },
+      {
+        "seed": 2,
+        "objective": 0.4052053556606986,
+        "altitude": 132.05535790514665,
+        "p7_evaluations": 73,
+        "closed_form_evaluations": 71
+      },
+      {
+        "seed": 3,
+        "objective": 0.40520148501332537,
+        "altitude": 131.14280661210145,
+        "p7_evaluations": 73,
+        "closed_form_evaluations": 71
+      },
+      {
+        "seed": 4,
+        "objective": 0.40521554869507,
+        "altitude": 132.47195788009023,
+        "p7_evaluations": 73,
+        "closed_form_evaluations": 72
+      },
+      {
+        "seed": 5,
+        "objective": 0.4052007521047718,
+        "altitude": 131.69464108399973,
+        "p7_evaluations": 73,
+        "closed_form_evaluations": 65
+      },
+      {
+        "seed": 6,
+        "objective": 0.40520018150647086,
+        "altitude": 131.59471221697132,
+        "p7_evaluations": 73,
+        "closed_form_evaluations": 69
+      },
+      {
+        "seed": 7,
+        "objective": 0.40523981528533803,
+        "altitude": 133.0851968825488,
+        "p7_evaluations": 73,
+        "closed_form_evaluations": 68
+      },
+      {
+        "seed": 8,
+        "objective": 0.405200264633397,
+        "altitude": 131.30818280231182,
+        "p7_evaluations": 73,
+        "closed_form_evaluations": 70
+      },
+      {
+        "seed": 9,
+        "objective": 0.40531054847382103,
+        "altitude": 134.1936349433137,
+        "p7_evaluations": 73,
+        "closed_form_evaluations": 67
+      }
+    ],
+    "0.9": [
+      {
+        "seed": 0,
+        "objective": 0.3905670337873096,
+        "altitude": 136.34596081462524,
+        "p7_evaluations": 73,
+        "closed_form_evaluations": 66
+      },
+      {
+        "seed": 1,
+        "objective": 0.39056696389775986,
+        "altitude": 136.4650782333652,
+        "p7_evaluations": 73,
+        "closed_form_evaluations": 70
+      },
+      {
+        "seed": 2,
+        "objective": 0.39057735041570635,
+        "altitude": 134.94526012753022,
+        "p7_evaluations": 73,
+        "closed_form_evaluations": 65
+      },
+      {
+        "seed": 3,
+        "objective": 0.3905670650323943,
+        "altitude": 136.62538804729476,
+        "p7_evaluations": 73,
+        "closed_form_evaluations": 64
+      },
+      {
+        "seed": 4,
+        "objective": 0.3905727657529334,
+        "altitude": 137.63585090830537,
+        "p7_evaluations": 73,
+        "closed_form_evaluations": 69
+      },
+      {
+        "seed": 5,
+        "objective": 0.3905669686381014,
+        "altitude": 136.43886614425045,
+        "p7_evaluations": 73,
+        "closed_form_evaluations": 68
+      },
+      {
+        "seed": 6,
+        "objective": 0.39056696392684287,
+        "altitude": 136.480763950444,
+        "p7_evaluations": 73,
+        "closed_form_evaluations": 69
+      },
+      {
+        "seed": 7,
+        "objective": 0.39056756373606777,
+        "altitude": 136.8447219961679,
+        "p7_evaluations": 73,
+        "closed_form_evaluations": 66
+      },
+      {
+        "seed": 8,
+        "objective": 0.39056700941661293,
+        "altitude": 136.37030292058665,
+        "p7_evaluations": 73,
+        "closed_form_evaluations": 67
+      },
+      {
+        "seed": 9,
+        "objective": 0.39056829229820905,
+        "altitude": 135.92269271867698,
+        "p7_evaluations": 73,
+        "closed_form_evaluations": 64
+      }
+    ]
+  },
+  "algorithm1_exact_pso": null,
+  "exact_refinement_curves": {
+    "0.1": [
+      {
+        "altitude": 102.0,
+        "objective": 0.1508128009172045,
+        "solve_seconds": 0.27748259999862057
+      },
+      {
+        "altitude": 103.0,
+        "objective": 0.14827909851456242,
+        "solve_seconds": 0.2776992999988579
+      },
+      {
+        "altitude": 104.0,
+        "objective": 0.14616292219463203,
+        "solve_seconds": 0.3017510999998194
+      },
+      {
+        "altitude": 105.0,
+        "objective": 0.14443294992848196,
+        "solve_seconds": 0.30763069999920845
+      },
+      {
+        "altitude": 106.0,
+        "objective": 0.1430489558967443,
+        "solve_seconds": 0.3039305999991484
+      },
+      {
+        "altitude": 107.0,
+        "objective": 0.14197900014422424,
+        "solve_seconds": 0.2778035999999702
+      },
+      {
+        "altitude": 108.0,
+        "objective": 0.14119566288723956,
+        "solve_seconds": 0.27588409999953
+      },
+      {
+        "altitude": 109.0,
+        "objective": 0.14067411624246667,
+        "solve_seconds": 0.2765471000002435
+      },
+      {
+        "altitude": 110.0,
+        "objective": 0.1403918192309585,
+        "solve_seconds": 0.27569319999929576
+      },
+      {
+        "altitude": 111.0,
+        "objective": 0.14032834300160738,
+        "solve_seconds": 0.2783009000013408,
+        "fast_scan_center": 110.0,
+        "fast_scan_spacing_m": 2.0,
+        "exact_refine_spacing_m": 1.0
+      },
+      {
+        "altitude": 112.0,
+        "objective": 0.14046519805613267,
+        "solve_seconds": 0.27938779999931285
+      },
+      {
+        "altitude": 113.0,
+        "objective": 0.14078565812257718,
+        "solve_seconds": 0.28122869999970135
+      },
+      {
+        "altitude": 114.0,
+        "objective": 0.14127459767709238,
+        "solve_seconds": 0.30541160000029777
+      },
+      {
+        "altitude": 115.0,
+        "objective": 0.14191835372234796,
+        "solve_seconds": 0.30259449999903154
+      },
+      {
+        "altitude": 116.0,
+        "objective": 0.14270455802730267,
+        "solve_seconds": 0.30163100000027043
+      },
+      {
+        "altitude": 117.0,
+        "objective": 0.1436220208414605,
+        "solve_seconds": 0.2999137000006158
+      },
+      {
+        "altitude": 118.0,
+        "objective": 0.14466060612598808,
+        "solve_seconds": 0.2995304000014585
+      }
+    ],
+    "0.3": [
+      {
+        "altitude": 108.0,
+        "objective": 0.3149018415614109,
+        "solve_seconds": 0.3683794000007765
+      },
+      {
+        "altitude": 109.0,
+        "objective": 0.31329622619714964,
+        "solve_seconds": 0.3570724000001064
+      },
+      {
+        "altitude": 110.0,
+        "objective": 0.3119676240306857,
+        "solve_seconds": 0.45901080000112415
+      },
+      {
+        "altitude": 111.0,
+        "objective": 0.3108991250721608,
+        "solve_seconds": 0.3684568999997282
+      },
+      {
+        "altitude": 112.0,
+        "objective": 0.3100739402255458,
+        "solve_seconds": 0.3515262000000803
+      },
+      {
+        "altitude": 113.0,
+        "objective": 0.3094756126252331,
+        "solve_seconds": 0.38194060000023455
+      },
+      {
+        "altitude": 114.0,
+        "objective": 0.3090881775898485,
+        "solve_seconds": 0.4876027000009344
+      },
+      {
+        "altitude": 115.0,
+        "objective": 0.30889627905046535,
+        "solve_seconds": 0.35605279999981576
+      },
+      {
+        "altitude": 116.0,
+        "objective": 0.30888524981153725,
+        "solve_seconds": 0.3436108999994758,
+        "fast_scan_center": 116.0,
+        "fast_scan_spacing_m": 2.0,
+        "exact_refine_spacing_m": 1.0
+      },
+      {
+        "altitude": 117.0,
+        "objective": 0.30904116230167583,
+        "solve_seconds": 0.35606560000087484
+      },
+      {
+        "altitude": 118.0,
+        "objective": 0.3093508556809527,
+        "solve_seconds": 0.3539201999992656
+      },
+      {
+        "altitude": 119.0,
+        "objective": 0.3098019443633095,
+        "solve_seconds": 0.3846168000000034
+      },
+      {
+        "altitude": 120.0,
+        "objective": 0.31038281223505987,
+        "solve_seconds": 0.3611789000005956
+      },
+      {
+        "altitude": 121.0,
+        "objective": 0.31108259237813707,
+        "solve_seconds": 0.3750601000010647
+      },
+      {
+        "altitude": 122.0,
+        "objective": 0.31189115749603247,
+        "solve_seconds": 0.37135399999897345
+      },
+      {
+        "altitude": 123.0,
+        "objective": 0.3127990684021741,
+        "solve_seconds": 0.37832069999967644
+      },
+      {
+        "altitude": 124.0,
+        "objective": 0.31379755485515576,
+        "solve_seconds": 0.37374869999985094
+      }
+    ],
+    "0.5": [
+      {
+        "altitude": 114.0,
+        "objective": 0.3871493216451944,
+        "solve_seconds": 0.2733538000011322
+      },
+      {
+        "altitude": 115.0,
+        "objective": 0.3862805494117991,
+        "solve_seconds": 0.2724435000000085
+      },
+      {
+        "altitude": 116.0,
+        "objective": 0.3855407169099476,
+        "solve_seconds": 0.2649180999997043
+      },
+      {
+        "altitude": 117.0,
+        "objective": 0.38492316674942517,
+        "solve_seconds": 0.2629672000002756
+      },
+      {
+        "altitude": 118.0,
+        "objective": 0.3844211799373127,
+        "solve_seconds": 0.26281079999898793
+      },
+      {
+        "altitude": 119.0,
+        "objective": 0.3840280619751485,
+        "solve_seconds": 0.27816010000060487
+      },
+      {
+        "altitude": 120.0,
+        "objective": 0.3837372129589029,
+        "solve_seconds": 0.2667117999990296
+      },
+      {
+        "altitude": 121.0,
+        "objective": 0.3835421834442082,
+        "solve_seconds": 0.26361399999950663
+      },
+      {
+        "altitude": 122.0,
+        "objective": 0.3834367178346798,
+        "solve_seconds": 0.29164920000039274
+      },
+      {
+        "altitude": 123.0,
+        "objective": 0.3834147870050435,
+        "solve_seconds": 0.26524960000097053,
+        "fast_scan_center": 122.0,
+        "fast_scan_spacing_m": 2.0,
+        "exact_refine_spacing_m": 1.0
+      },
+      {
+        "altitude": 124.0,
+        "objective": 0.383470611716462,
+        "solve_seconds": 0.2601835999994364
+      },
+      {
+        "altitude": 125.0,
+        "objective": 0.38359867840308415,
+        "solve_seconds": 0.2618445999996766
+      },
+      {
+        "altitude": 126.0,
+        "objective": 0.3837937484405909,
+        "solve_seconds": 0.26709590000064054
+      },
+      {
+        "altitude": 127.0,
+        "objective": 0.3840508622660518,
+        "solve_seconds": 0.2635496000002604
+      },
+      {
+        "altitude": 128.0,
+        "objective": 0.3843653392454378,
+        "solve_seconds": 0.2609692999994877
+      },
+      {
+        "altitude": 129.0,
+        "objective": 0.3847327741905959,
+        "solve_seconds": 0.2626345999997284
+      },
+      {
+        "altitude": 130.0,
+        "objective": 0.3851490312811128,
+        "solve_seconds": 0.2608576999991783
+      }
+    ],
+    "0.7": [
+      {
+        "altitude": 124.0,
+        "objective": 0.40442985102477225,
+        "solve_seconds": 0.3124220999998215
+      },
+      {
+        "altitude": 125.0,
+        "objective": 0.40417804626603915,
+        "solve_seconds": 0.31071520000114106
+      },
+      {
+        "altitude": 126.0,
+        "objective": 0.4039700987674796,
+        "solve_seconds": 0.3433998000000429
+      },
+      {
+        "altitude": 127.0,
+        "objective": 0.40380385085356746,
+        "solve_seconds": 0.31213759999991453
+      },
+      {
+        "altitude": 128.0,
+        "objective": 0.40367718905474825,
+        "solve_seconds": 0.3031765000014275
+      },
+      {
+        "altitude": 129.0,
+        "objective": 0.40358803745127997,
+        "solve_seconds": 0.2896254000006593
+      },
+      {
+        "altitude": 130.0,
+        "objective": 0.40353439967377125,
+        "solve_seconds": 0.2836016000001109
+      },
+      {
+        "altitude": 131.0,
+        "objective": 0.40351434131608704,
+        "solve_seconds": 0.29133659999934025,
+        "fast_scan_center": 132.0,
+        "fast_scan_spacing_m": 2.0,
+        "exact_refine_spacing_m": 1.0
+      },
+      {
+        "altitude": 132.0,
+        "objective": 0.4035259996684767,
+        "solve_seconds": 0.28567020000082266
+      },
+      {
+        "altitude": 133.0,
+        "objective": 0.4035675894376459,
+        "solve_seconds": 0.28608859999985725
+      },
+      {
+        "altitude": 134.0,
+        "objective": 0.40363740448514074,
+        "solve_seconds": 0.29607620000024326
+      },
+      {
+        "altitude": 135.0,
+        "objective": 0.4037338172753405,
+        "solve_seconds": 0.2881531000002724
+      },
+      {
+        "altitude": 136.0,
+        "objective": 0.4038552799937144,
+        "solve_seconds": 0.294240200000786
+      },
+      {
+        "altitude": 137.0,
+        "objective": 0.4040003234085971,
+        "solve_seconds": 0.28396129999964614
+      },
+      {
+        "altitude": 138.0,
+        "objective": 0.40416755540305926,
+        "solve_seconds": 0.28124409999873023
+      },
+      {
+        "altitude": 139.0,
+        "objective": 0.40435565364690995,
+        "solve_seconds": 0.3099043000001984
+      },
+      {
+        "altitude": 140.0,
+        "objective": 0.4045633844747216,
+        "solve_seconds": 0.31544749999920896
+      }
+    ],
+    "0.9": [
+      {
+        "altitude": 128.0,
+        "objective": 0.3903183748597887,
+        "solve_seconds": 0.29311039999993227
+      },
+      {
+        "altitude": 129.0,
+        "objective": 0.39023673918273855,
+        "solve_seconds": 0.32351680000101624
+      },
+      {
+        "altitude": 130.0,
+        "objective": 0.3901667799604821,
+        "solve_seconds": 0.29484709999996994
+      },
+      {
+        "altitude": 131.0,
+        "objective": 0.3901080949699813,
+        "solve_seconds": 0.2812314000002516
+      },
+      {
+        "altitude": 132.0,
+        "objective": 0.3900602809955548,
+        "solve_seconds": 0.30044399999860616
+      },
+      {
+        "altitude": 133.0,
+        "objective": 0.3900229363087609,
+        "solve_seconds": 0.30103000000053726
+      },
+      {
+        "altitude": 134.0,
+        "objective": 0.38999565644785666,
+        "solve_seconds": 0.3358714999994845
+      },
+      {
+        "altitude": 135.0,
+        "objective": 0.3899780607005475,
+        "solve_seconds": 0.33786139999938314
+      },
+      {
+        "altitude": 136.0,
+        "objective": 0.3899697572355226,
+        "solve_seconds": 0.34751560000040627,
+        "fast_scan_center": 136.0,
+        "fast_scan_spacing_m": 2.0,
+        "exact_refine_spacing_m": 1.0
+      },
+      {
+        "altitude": 137.0,
+        "objective": 0.38997036805305396,
+        "solve_seconds": 0.3375386999996408
+      },
+      {
+        "altitude": 138.0,
+        "objective": 0.3899795241456235,
+        "solve_seconds": 0.30599049999909766
+      },
+      {
+        "altitude": 139.0,
+        "objective": 0.3899968662597292,
+        "solve_seconds": 0.31173889999990934
+      },
+      {
+        "altitude": 140.0,
+        "objective": 0.3900220454824557,
+        "solve_seconds": 0.3083083000001352
+      },
+      {
+        "altitude": 141.0,
+        "objective": 0.39005472365021576,
+        "solve_seconds": 0.31868150000082096
+      },
+      {
+        "altitude": 142.0,
+        "objective": 0.39009457366100136,
+        "solve_seconds": 0.32333900000048743
+      },
+      {
+        "altitude": 143.0,
+        "objective": 0.3901412795944295,
+        "solve_seconds": 0.31088480000107666
+      },
+      {
+        "altitude": 144.0,
+        "objective": 0.3901945368298529,
+        "solve_seconds": 0.33099740000034217
+      }
+    ]
+  }
+}

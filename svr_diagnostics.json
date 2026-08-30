@@ -1,0 +1,58 @@
+{
+  "dataset": "ds3.npz",
+  "split": {
+    "train": 800,
+    "test": 200,
+    "seed": 42
+  },
+  "model": {
+    "kernel": "rbf",
+    "C": 300.0,
+    "gamma": 0.03,
+    "epsilon": 4.0
+  },
+  "residuals": {
+    "mean_m": -1.9701888727461843,
+    "std_m": 15.532525644171521,
+    "median_absolute_m": 4.681009649953943,
+    "p95_absolute_m": 23.509052057446155
+  },
+  "learning_curve": [
+    {
+      "train_size": 96,
+      "train_mae_m": 5.901686058003721,
+      "cv_mae_mean_m": 10.328119524068791,
+      "cv_mae_std_m": 1.4032117118324945
+    },
+    {
+      "train_size": 204,
+      "train_mae_m": 6.313606231596973,
+      "cv_mae_mean_m": 8.802008881504552,
+      "cv_mae_std_m": 1.0764387937252855
+    },
+    {
+      "train_size": 313,
+      "train_mae_m": 6.5886330290805,
+      "cv_mae_mean_m": 8.44898602911386,
+      "cv_mae_std_m": 1.1681318586965495
+    },
+    {
+      "train_size": 422,
+      "train_mae_m": 6.572669140033173,
+      "cv_mae_mean_m": 8.138078343746528,
+      "cv_mae_std_m": 1.2337823817113571
+    },
+    {
+      "train_size": 531,
+      "train_mae_m": 6.800788535489043,
+      "cv_mae_mean_m": 7.986785541403231,
+      "cv_mae_std_m": 1.2245655807094633
+    },
+    {
+      "train_size": 640,
+      "train_mae_m": 6.872247109682841,
+      "cv_mae_mean_m": 7.950307372232819,
+      "cv_mae_std_m": 1.0958675811311092
+    }
+  ]
+}
