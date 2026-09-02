@@ -16,6 +16,8 @@ from sklearn.tree import DecisionTreeRegressor
 
 from evaluate_ml_corrected import canonicalise_ehds
 
+ROOT = Path(__file__).resolve().parent.parent
+
 
 def models() -> dict:
     return {
@@ -51,7 +53,7 @@ def models() -> dict:
 
 
 def main() -> None:
-    data = np.load("ds3.npz")
+    data = np.load(ROOT / "data" / "ds3.npz")
     X, y = canonicalise_ehds(data["X"]), data["yH"]
     seeds = [7, 19, 42, 73, 101]
     rows = []
@@ -82,7 +84,7 @@ def main() -> None:
             for metric in ["MAE_m", "RMSE_m", "R2"]
         }
     output = {"seeds": seeds, "hyperparameters": "locked from seed-42 training-only CV", "summary": summary, "rows": rows}
-    out = Path("ml_corrected_outputs/repeated_split_metrics.json")
+    out = ROOT / "results" / "ml" / "repeated_split_metrics.json"
     out.write_text(json.dumps(output, indent=2), encoding="utf-8")
     print(json.dumps(summary, indent=2))
 

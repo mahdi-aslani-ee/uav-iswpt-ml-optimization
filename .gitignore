@@ -216,3 +216,12 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Project-specific: local scratch/audit output directories.
+# Canonical, committed results live under results/ml/ and results/gap1/.
+# These are intermediate or external directories some scripts/notebooks can
+# still read or write (see README "Remaining Manual Issues"); they are not
+# tracked in git.
+/gap1_outputs/
+/gap1_outputs_paper_grid/
+/ml_corrected_outputs/

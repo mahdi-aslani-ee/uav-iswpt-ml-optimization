@@ -9,14 +9,16 @@ from __future__ import annotations
 
 import hashlib
 import json
+import sys
 from pathlib import Path
 
 import numpy as np
 
+ROOT = Path(__file__).resolve().parent.parent.parent
+SRC = ROOT / "src"
+sys.path.insert(0, str(SRC))
+
 from kang import A2, A3, B2, B3, max_desired_power
-
-
-ROOT = Path(__file__).resolve().parent
 
 
 def load(relative: str) -> dict:
@@ -36,7 +38,7 @@ def check_equal(name: str, observed, expected) -> None:
 
 
 def main() -> None:
-    kang_hash = hashlib.sha256((ROOT / "kang.py").read_bytes()).hexdigest()
+    kang_hash = hashlib.sha256((SRC / "kang.py").read_bytes()).hexdigest()
     check_equal(
         "protected kang.py SHA-256",
         kang_hash,
@@ -100,19 +102,19 @@ def main() -> None:
     check_close("Algorithm 1 max absolute audit gap (%)", max_abs_pso_gap, 0.016783029681161066)
     check_equal("Algorithm 1 evaluations per rho", sorted({row["evaluations"] for row in pso["runs"]}), [73])
 
-    fast = load("gap1_outputs/fast_solver_audit.json")["summary"]["fast120"]
+    fast = load("results/gap1/fast_solver_audit.json")["summary"]["fast120"]
     check_close("fast solver median absolute relative error", fast["median_absolute_relative_error"], 0.0002539748563927328)
     check_close("fast solver p95 absolute relative error", fast["p95_absolute_relative_error"], 0.0017577469395139353)
     check_close("fast solver max absolute relative error", fast["max_absolute_relative_error"], 0.002138026364139572)
 
-    labels = load("gap1_outputs/label_quality_audit.json")["summary"]
+    labels = load("results/gap1/label_quality_audit.json")["summary"]
     check_close("stored-label altitude MAE (m)", labels["altitude_mae_m"], 2.2685185185185177)
     check_close("stored-label mean P1 gap (%)", labels["objective_gap_mean_percent"], 0.06333874103359918)
     check_close("stored-label p95 P1 gap (%)", labels["objective_gap_p95_percent"], 0.22213208292673836)
     check_close("stored-label max P1 gap (%)", labels["objective_gap_max_percent"], 0.2427514380129119)
 
-    ml = load("ml_corrected_outputs/ml_corrected_results.json")
-    repeated = load("ml_corrected_outputs/repeated_split_metrics.json")
+    ml = load("results/ml/ml_corrected_results.json")
+    repeated = load("results/ml/repeated_split_metrics.json")
     expected_repeated_mae = {
         "Linear": (8.471580421862095, 0.6506032510212549),
         "Decision Tree": (10.496681881202313, 0.9573855358495924),

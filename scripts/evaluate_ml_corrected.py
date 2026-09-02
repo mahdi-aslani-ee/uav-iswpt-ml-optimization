@@ -12,6 +12,7 @@ Corrections relative to ``train3.py``:
 from __future__ import annotations
 
 import json
+import sys
 import time
 from pathlib import Path
 
@@ -29,6 +30,9 @@ from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import StandardScaler
 from sklearn.svm import SVR
 from sklearn.tree import DecisionTreeRegressor
+
+ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(ROOT / "src"))
 
 from fast import solve_fast
 from kang import (
@@ -113,9 +117,9 @@ def scenario(z: np.ndarray, theta: np.ndarray, Agrid: np.ndarray):
 
 
 def main() -> None:
-    output = Path("ml_corrected_outputs")
-    output.mkdir(exist_ok=True)
-    data = np.load("ds3.npz")
+    output = ROOT / "results" / "ml"
+    output.mkdir(parents=True, exist_ok=True)
+    data = np.load(ROOT / "data" / "ds3.npz")
     X_raw, y_h = data["X"], data["yH"]
     X = canonicalise_ehds(X_raw)
     train, test = train_test_split(np.arange(len(X)), test_size=0.2, random_state=42)

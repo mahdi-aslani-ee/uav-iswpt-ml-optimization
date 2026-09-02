@@ -19,6 +19,7 @@ import argparse
 import csv
 import json
 import platform
+import sys
 import time
 from pathlib import Path
 
@@ -33,6 +34,9 @@ from sklearn.model_selection import train_test_split
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import StandardScaler
 from sklearn.svm import SVR
+
+ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(ROOT / "src"))
 
 from algorithm2 import deterministic_algorithm2, pso_minimize, solve_algorithm2
 from evaluate_ml_corrected import canonicalise_ehds
@@ -155,7 +159,7 @@ def main() -> None:
     parser.add_argument("--exact-pso", action="store_true")
     parser.add_argument("--exact-pso-rho", type=float, default=0.6)
     parser.add_argument("--exact-pso-seed", type=int, default=0)
-    parser.add_argument("--output", type=Path, default=Path("gap1_outputs"))
+    parser.add_argument("--output", type=Path, default=ROOT / "results" / "gap1")
     args = parser.parse_args()
     args.output.mkdir(parents=True, exist_ok=True)
 
@@ -170,7 +174,7 @@ def main() -> None:
     rhos = [0.1, 0.3, 0.5, 0.7, 0.9]
 
     ref = FixedAltitudeSDP(Agrid, len(r))
-    svr, svr_meta = fit_locked_svr(Path("ds3.npz"))
+    svr, svr_meta = fit_locked_svr(ROOT / "data" / "ds3.npz")
     all_rows = []
     exact_curves = {}
     pso_repeatability = {}

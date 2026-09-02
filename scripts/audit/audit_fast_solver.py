@@ -8,9 +8,13 @@ from __future__ import annotations
 
 import argparse
 import json
+import sys
 from pathlib import Path
 
 import numpy as np
+
+ROOT = Path(__file__).resolve().parent.parent.parent
+sys.path.insert(0, str(ROOT / "src"))
 
 from fast import solve_fast
 from kang import (
@@ -29,10 +33,10 @@ def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--samples", type=int, default=20)
     parser.add_argument("--seed", type=int, default=202408)
-    parser.add_argument("--output", type=Path, default=Path("gap1_outputs/fast_solver_audit.json"))
+    parser.add_argument("--output", type=Path, default=ROOT / "results" / "gap1" / "fast_solver_audit.json")
     args = parser.parse_args()
 
-    data = np.load("ds3.npz")
+    data = np.load(ROOT / "data" / "ds3.npz")
     features, labels = data["X"], data["yH"]
     rng = np.random.default_rng(args.seed)
     indices = rng.choice(len(features), size=args.samples, replace=False)

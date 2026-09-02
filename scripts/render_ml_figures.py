@@ -20,6 +20,9 @@ from sklearn.tree import DecisionTreeRegressor
 from evaluate_ml_corrected import canonicalise_ehds
 
 
+ROOT = Path(__file__).resolve().parent.parent
+
+
 def locked_models() -> dict:
     return {
         "Linear": Pipeline([("scale", StandardScaler()), ("model", LinearRegression())]),
@@ -30,9 +33,9 @@ def locked_models() -> dict:
 
 
 def main() -> None:
-    output = Path("ml_corrected_outputs")
+    output = ROOT / "results" / "ml"
     result = json.loads((output / "ml_corrected_results.json").read_text())
-    data = np.load("ds3.npz")
+    data = np.load(ROOT / "data" / "ds3.npz")
     X, y = canonicalise_ehds(data["X"]), data["yH"]
     train, test = train_test_split(np.arange(len(X)), test_size=0.2, random_state=42)
     predictions = {}

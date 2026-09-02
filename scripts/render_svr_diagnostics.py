@@ -20,6 +20,7 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.svm import SVR
 
 
+ROOT = Path(__file__).resolve().parent.parent
 HMIN = 50.0
 HMAX = 250.0
 
@@ -51,9 +52,9 @@ def locked_svr() -> Pipeline:
 
 def main() -> None:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--data", type=Path, default=Path("ds3.npz"))
+    parser.add_argument("--data", type=Path, default=ROOT / "data" / "ds3.npz")
     parser.add_argument(
-        "--output", type=Path, default=Path("ml_corrected_outputs")
+        "--output", type=Path, default=ROOT / "results" / "ml"
     )
     args = parser.parse_args()
     args.output.mkdir(parents=True, exist_ok=True)

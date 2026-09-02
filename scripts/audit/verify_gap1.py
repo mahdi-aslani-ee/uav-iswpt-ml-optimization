@@ -2,9 +2,13 @@
 from __future__ import annotations
 
 import json
+import sys
 from pathlib import Path
 
 import numpy as np
+
+ROOT = Path(__file__).resolve().parent.parent.parent
+sys.path.insert(0, str(ROOT / "src"))
 
 from algorithm2 import deterministic_algorithm2
 from kang import (
@@ -70,11 +74,11 @@ def main() -> None:
     require("Eq. (37) PSD constraint", a2_min_eigenvalue > -1e-7, f"lambda_min {a2_min_eigenvalue:.3e}")
     require("Algorithm 2 is a restricted design", alg2.objective >= full.objective - 1e-6, f"A2 {alg2.objective:.6f}, P2 {full.objective:.6f}")
 
-    sweep = json.loads(Path("gap1_outputs_paper_grid/exact_alg1_pso_sweep.json").read_text())
+    sweep = json.loads((ROOT / "gap1_outputs_paper_grid" / "exact_alg1_pso_sweep.json").read_text())
     max_gap = max(abs(x["gap_to_audit_percent"]) for x in sweep["runs"])
     require("Kang Algorithm 1 PSO repeatability audit", max_gap < 0.05, f"max |gap| {max_gap:.4f}%")
 
-    paper = json.loads(Path("gap1_outputs_paper_grid/gap1_results.json").read_text())
+    paper = json.loads((ROOT / "gap1_outputs_paper_grid" / "gap1_results.json").read_text())
     rows = paper["rows"]
     required_methods = {
         "Fixed Hmin (P2 exact)",
