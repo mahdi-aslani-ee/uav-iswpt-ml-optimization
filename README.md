@@ -107,10 +107,14 @@ uav-iswpt-ml-optimization/
 |       `-- validate_report_claims.py # machine-checks every number quoted in this README
 |-- data/
 |   |-- dataset.csv                   # human-readable export of the 1000-row dataset
-|   `-- ds3.npz                       # dataset (features X, labels yH/yO)
+|   |-- ds3.npz                       # dataset (features X, labels yH/yO)
+|   `-- reference/
+|       `-- paper_fig3a_digitized.csv # manually digitized from Kang (2024) Fig. 3(a); NOT our results
 |-- results/
 |   |-- ml/                           # ML evaluation figures + JSON evidence
 |   `-- gap1/                         # gap-1 (algorithm benchmark) figures + JSON evidence
+|       |-- audits/                   # one-off audit artifacts (not primary reproducible results)
+|       `-- expensive_runs/           # saved literal-Algorithm-1-PSO runs (slow, exact CVXPY inner solves)
 `-- docs/
     |-- Report.pdf
     `-- Slide.pdf
@@ -164,6 +168,21 @@ All scripts resolve `data/`, `src/`, and their own `results/...` output folder r
 ![Gap-1 objective comparison](results/gap1/gap1_objective_comparison.png)
 ![Gap-1 altitude comparison](results/gap1/gap1_altitude_comparison.png)
 
+## Supplementary Gap-1 Evidence and Reference Data
+
+Beyond the primary figures/JSON above, `results/gap1/` has two subfolders for evidence that supports the main results but isn't itself a headline number:
+
+- **`results/gap1/audits/`** — one-off audit artifacts, e.g. `resolution_audit_rho06.json`, which compares the 1-degree vs. 0.1-degree angular-grid results at `rho = 0.6` (objectives at `Hmin`/`Hmax`/audit-optimum/ML-predicted altitude/Algorithm 2, and the relative change from the finer grid). These are saved supporting checks, not primary reproducible results, and there is no single script that regenerates this exact file.
+- **`results/gap1/expensive_runs/`** — saved output from a *literal* implementation of Kang Algorithm 1 (the paper's PSO, with an exact CVXPY solve at every particle evaluation — this is what `benchmark_gap1.py --exact-pso` exercises, though these specific files were assembled separately from a normal `benchmark_gap1.py` run rather than being its direct output). Includes `exact_alg1_pso_sweep.json` (read by `verify_gap1.py` and `validate_report_claims.py` for the PSO-repeatability check) and `exact_alg1_pso_rho06.json` (a single `rho = 0.6` run, 73 exact `P2` evaluations).
+
+`data/reference/paper_fig3a_digitized.csv` is **manually digitized reference data from Figure 3(a) of the Kang (2024) paper** (read from a 180-dpi rendering, with an estimated reading uncertainty of approximately ±0.003) — it is **not** an output of this project's own simulation or optimization and must not be read as one; it exists only for visually cross-checking this project's curves against the published figure.
+
+Console output from `scripts/audit/verify_gap1.py` (PASS/FAIL log of the equation tripwires, DCP/DPP checks, PSD and per-antenna constraints, objective consistency, Algorithm 1 repeatability, and five-method benchmark completeness) is intentionally **not** committed — it's fully reproducible by running the script yourself:
+
+```bash
+python scripts/audit/verify_gap1.py
+```
+
 ## Limitations
 
 - All scenarios are simulation-generated (sampled and labeled by the optimizer itself), not field measurements; the dataset does not include any real UAV flight or channel-sounding data.
@@ -182,4 +201,4 @@ This repository is an independent implementation of that system model (`src/kang
 
 ## Remaining Manual Issues and Open Items
 
-See the reorganization report for the full list; the main one is: `gap1_outputs_paper_grid/` (read by `verify_gap1.py` and `validate_report_claims.py`) is not produced by any committed script and is not tracked in git — its provenance needs to be documented or the folder needs to be committed under `results/` before those two scripts can run end to end.
+`verify_gap1.py` and `validate_report_claims.py` both still read `gap1_outputs_paper_grid/gap1_results.json` — a Kang-paper-grid comparison, distinct from the project's own `results/gap1/gap1_results.json`. That specific file (plus its accompanying `gap1_altitude_comparison.png`/`gap1_method_comparison.csv`/`gap1_objective_comparison.png`, which duplicate names already committed under `results/gap1/` but hold different, paper-grid-specific content) is not produced by any committed script and is not yet tracked in git. Its provenance still needs to be documented, or it needs a committed home, before those two scripts can run end to end from a fresh clone.

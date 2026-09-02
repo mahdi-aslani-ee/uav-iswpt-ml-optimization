@@ -97,7 +97,7 @@ def main() -> None:
         for method, expected in methods.items():
             check_close(f"paper-grid rho={rho} {method}", rows[(rho, method)]["objective"], expected)
 
-    pso = load("gap1_outputs_paper_grid/exact_alg1_pso_sweep.json")
+    pso = load("results/gap1/expensive_runs/exact_alg1_pso_sweep.json")
     max_abs_pso_gap = max(abs(row["gap_to_audit_percent"]) for row in pso["runs"])
     check_close("Algorithm 1 max absolute audit gap (%)", max_abs_pso_gap, 0.016783029681161066)
     check_equal("Algorithm 1 evaluations per rho", sorted({row["evaluations"] for row in pso["runs"]}), [73])
