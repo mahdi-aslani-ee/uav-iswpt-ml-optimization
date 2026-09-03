@@ -78,7 +78,7 @@ def main() -> None:
     max_gap = max(abs(x["gap_to_audit_percent"]) for x in sweep["runs"])
     require("Kang Algorithm 1 PSO repeatability audit", max_gap < 0.05, f"max |gap| {max_gap:.4f}%")
 
-    paper = json.loads((ROOT / "gap1_outputs_paper_grid" / "gap1_results.json").read_text())
+    paper = json.loads((ROOT / "results" / "gap1" / "audits" / "gap1_results.json").read_text())
     rows = paper["rows"]
     required_methods = {
         "Fixed Hmin (P2 exact)",

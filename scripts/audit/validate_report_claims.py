@@ -51,7 +51,7 @@ def main() -> None:
     check_close("Kang B3", float(B3), 0.6993983051, 5e-11)
     check_close("max_desired_power(50 m)", max_desired_power(50.0), 1.159800804614e-3, 5e-16)
 
-    paper = load("gap1_outputs_paper_grid/gap1_results.json")
+    paper = load("results/gap1/audits/gap1_results.json")
     check_equal("reference SDP DCP", paper["fidelity"]["reference_sdp_is_dcp"], True)
     check_equal("reference SDP DPP", paper["fidelity"]["reference_sdp_is_dpp"], True)
 
