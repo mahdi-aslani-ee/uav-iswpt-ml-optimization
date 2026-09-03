@@ -1,0 +1,62 @@
+{
+  "angle_resolution_deg": 0.1,
+  "seed": 0,
+  "runs": [
+    {
+      "objective": 0.14032502987648038,
+      "altitude": 110.72809282148137,
+      "evaluations": 73,
+      "seed": 0,
+      "wall_seconds": 11.753638505000708,
+      "meaning": "Literal Kang Algorithm 1: Table 1 PSO and exact P2|h per evaluation",
+      "audit_objective": 0.1403283430016156,
+      "audit_altitude": 111.0,
+      "gap_to_audit_percent": -0.0023609807287287587
+    },
+    {
+      "objective": 0.30889381856763776,
+      "altitude": 115.02542268423288,
+      "evaluations": 73,
+      "seed": 0,
+      "wall_seconds": 13.682507858000463,
+      "meaning": "Literal Kang Algorithm 1: Table 1 PSO and exact P2|h per evaluation",
+      "audit_objective": 0.30888524981153115,
+      "audit_altitude": 116.0,
+      "gap_to_audit_percent": 0.002774090414429514
+    },
+    {
+      "objective": 0.3834791356167251,
+      "altitude": 124.08875388528148,
+      "evaluations": 73,
+      "seed": 0,
+      "wall_seconds": 12.291095679000136,
+      "meaning": "Literal Kang Algorithm 1: Table 1 PSO and exact P2|h per evaluation",
+      "audit_objective": 0.38341478699922105,
+      "audit_altitude": 123.0,
+      "gap_to_audit_percent": 0.016783029681161066
+    },
+    {
+      "objective": 0.4035262609856094,
+      "altitude": 132.00965710696823,
+      "evaluations": 73,
+      "seed": 0,
+      "wall_seconds": 14.039748434999638,
+      "meaning": "Literal Kang Algorithm 1: Table 1 PSO and exact P2|h per evaluation",
+      "audit_objective": 0.4035143413160932,
+      "audit_altitude": 131.0,
+      "gap_to_audit_percent": 0.0029539642822395576
+    },
+    {
+      "objective": 0.3899689789560547,
+      "altitude": 136.34596081462524,
+      "evaluations": 73,
+      "seed": 0,
+      "wall_seconds": 12.724451084000066,
+      "meaning": "Literal Kang Algorithm 1: Table 1 PSO and exact P2|h per evaluation",
+      "audit_objective": 0.3899697572352807,
+      "audit_altitude": 136.0,
+      "gap_to_audit_percent": -0.00019957425199531543
+    }
+  ],
+  "total_seconds": 64.49234454500038
+}

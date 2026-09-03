@@ -1,0 +1,164 @@
+{
+  "sample_count": 12,
+  "seed": 202409,
+  "indices": [
+    258,
+    789,
+    221,
+    304,
+    474,
+    521,
+    386,
+    854,
+    459,
+    79,
+    291,
+    20
+  ],
+  "audit_grid": "5 m global fast basin scan + 1 m exact CVXPY refinement over +/-8 m",
+  "summary": {
+    "altitude_mae_m": 2.2685185185185177,
+    "altitude_median_absolute_error_m": 1.944444444444457,
+    "altitude_max_absolute_error_m": 5.333333333333329,
+    "objective_gap_mean_percent": 0.06333874103114381,
+    "objective_gap_median_percent": 0.02357555063738868,
+    "objective_gap_p95_percent": 0.22213208290237854,
+    "objective_gap_max_percent": 0.24275143801289187,
+    "stored_fast_vs_exact_same_h_mean_percent": 0.04298759910561295,
+    "stored_fast_vs_exact_same_h_max_abs_percent": 0.13803881878851834
+  },
+  "rows": [
+    {
+      "index": 258,
+      "stored_altitude": 50.0,
+      "audit_altitude": 50.0,
+      "absolute_altitude_error_m": 0.0,
+      "stored_fast_objective": 0.5323170812189464,
+      "exact_objective_at_stored_altitude": 0.5323166531558707,
+      "audit_objective": 0.5323166531558707,
+      "stored_altitude_gap_percent": 0.0,
+      "stored_fast_vs_exact_at_same_h_percent": 8.041512004457809e-05
+    },
+    {
+      "index": 789,
+      "stored_altitude": 83.33333333333333,
+      "audit_altitude": 80.0,
+      "absolute_altitude_error_m": 3.3333333333333286,
+      "stored_fast_objective": 0.27843431593355217,
+      "exact_objective_at_stored_altitude": 0.2784343151132596,
+      "audit_objective": 0.27776004860105524,
+      "stored_altitude_gap_percent": 0.24275143801289187,
+      "stored_fast_vs_exact_at_same_h_percent": 2.946090016847488e-07
+    },
+    {
+      "index": 221,
+      "stored_altitude": 161.1111111111111,
+      "audit_altitude": 164.0,
+      "absolute_altitude_error_m": 2.888888888888914,
+      "stored_fast_objective": 0.4556171065607664,
+      "exact_objective_at_stored_altitude": 0.45515958917074734,
+      "audit_objective": 0.4550271410609229,
+      "stored_altitude_gap_percent": 0.029107738390203253,
+      "stored_fast_vs_exact_at_same_h_percent": 0.10051801629679807
+    },
+    {
+      "index": 304,
+      "stored_altitude": 105.55555555555556,
+      "audit_altitude": 110.0,
+      "absolute_altitude_error_m": 4.444444444444443,
+      "stored_fast_objective": 0.5411422343589649,
+      "exact_objective_at_stored_altitude": 0.541142234355729,
+      "audit_objective": 0.5406958945021888,
+      "stored_altitude_gap_percent": 0.08254914788119191,
+      "stored_fast_vs_exact_at_same_h_percent": 5.979882634234989e-10
+    },
+    {
+      "index": 474,
+      "stored_altitude": 105.55555555555556,
+      "audit_altitude": 106.0,
+      "absolute_altitude_error_m": 0.44444444444444287,
+      "stored_fast_objective": 0.18259864791356417,
+      "exact_objective_at_stored_altitude": 0.18255659756639855,
+      "audit_objective": 0.18254938714908722,
+      "stored_altitude_gap_percent": 0.003949844709937678,
+      "stored_fast_vs_exact_at_same_h_percent": 0.02303414268570774
+    },
+    {
+      "index": 521,
+      "stored_altitude": 94.44444444444444,
+      "audit_altitude": 91.0,
+      "absolute_altitude_error_m": 3.444444444444443,
+      "stored_fast_objective": 0.42496784630643364,
+      "exact_objective_at_stored_altitude": 0.4246139998517958,
+      "audit_objective": 0.42411300040459304,
+      "stored_altitude_gap_percent": 0.11812876443891981,
+      "stored_fast_vs_exact_at_same_h_percent": 0.0833336759412837
+    },
+    {
+      "index": 386,
+      "stored_altitude": 150.0,
+      "audit_altitude": 149.0,
+      "absolute_altitude_error_m": 1.0,
+      "stored_fast_objective": 0.1666188973242495,
+      "exact_objective_at_stored_altitude": 0.16638921561642112,
+      "audit_objective": 0.1663591988224857,
+      "stored_altitude_gap_percent": 0.01804336288457411,
+      "stored_fast_vs_exact_at_same_h_percent": 0.13803881878851834
+    },
+    {
+      "index": 854,
+      "stored_altitude": 116.66666666666666,
+      "audit_altitude": 116.0,
+      "absolute_altitude_error_m": 0.6666666666666572,
+      "stored_fast_objective": 0.47583402995906043,
+      "exact_objective_at_stored_altitude": 0.4754578041399923,
+      "audit_objective": 0.4754356948552015,
+      "stored_altitude_gap_percent": 0.004650320754214307,
+      "stored_fast_vs_exact_at_same_h_percent": 0.0791291710415126
+    },
+    {
+      "index": 459,
+      "stored_altitude": 50.0,
+      "audit_altitude": 51.0,
+      "absolute_altitude_error_m": 1.0,
+      "stored_fast_objective": 0.5719061093064948,
+      "exact_objective_at_stored_altitude": 0.5719061092970202,
+      "audit_objective": 0.5718736464392868,
+      "stored_altitude_gap_percent": 0.005676578722506602,
+      "stored_fast_vs_exact_at_same_h_percent": 1.656658692017576e-09
+    },
+    {
+      "index": 79,
+      "stored_altitude": 83.33333333333333,
+      "audit_altitude": 78.0,
+      "absolute_altitude_error_m": 5.333333333333329,
+      "stored_fast_objective": 0.5161723115838155,
+      "exact_objective_at_stored_altitude": 0.5159350718033071,
+      "audit_objective": 0.5148782240003371,
+      "stored_altitude_gap_percent": 0.20526170144832223,
+      "stored_fast_vs_exact_at_same_h_percent": 0.045982487617904105
+    },
+    {
+      "index": 291,
+      "stored_altitude": 194.44444444444443,
+      "audit_altitude": 190.0,
+      "absolute_altitude_error_m": 4.444444444444429,
+      "stored_fast_objective": 0.3394280445137072,
+      "exact_objective_at_stored_altitude": 0.3394266044144129,
+      "audit_objective": 0.33926747307748845,
+      "stored_altitude_gap_percent": 0.04690438947211478,
+      "stored_fast_vs_exact_at_same_h_percent": 0.00042427413631842637
+    },
+    {
+      "index": 20,
+      "stored_altitude": 72.22222222222223,
+      "audit_altitude": 72.0,
+      "absolute_altitude_error_m": 0.22222222222222854,
+      "stored_fast_objective": 0.4022473793173655,
+      "exact_objective_at_stored_altitude": 0.4020652040125806,
+      "audit_objective": 0.402052975146537,
+      "stored_altitude_gap_percent": 0.0030416056588492197,
+      "stored_fast_vs_exact_at_same_h_percent": 0.045309890775619165
+    }
+  ]
+}

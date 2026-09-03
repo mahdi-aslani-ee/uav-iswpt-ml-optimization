@@ -1,0 +1,485 @@
+{
+  "sample_count": 20,
+  "seed": 202408,
+  "indices": [
+    630,
+    774,
+    865,
+    46,
+    639,
+    345,
+    480,
+    761,
+    751,
+    559,
+    234,
+    435,
+    859,
+    5,
+    42,
+    983,
+    528,
+    608,
+    735,
+    338
+  ],
+  "meaning": "Fast-vs-exact comparison at each stored label altitude; not an audit of the outer altitude search.",
+  "summary": {
+    "fast120": {
+      "median_absolute_relative_error": 0.00025397485633087103,
+      "p95_absolute_relative_error": 0.0017577469403489076,
+      "max_absolute_relative_error": 0.002138026363654863,
+      "max_diagonal_error": 0.0,
+      "min_eigenvalue_over_cases": 6.352807174919218e-06
+    },
+    "fast500": {
+      "median_absolute_relative_error": 0.00022681864673205235,
+      "p95_absolute_relative_error": 0.0017990476908418239,
+      "max_absolute_relative_error": 0.0020822669627330657,
+      "max_diagonal_error": 0.0,
+      "min_eigenvalue_over_cases": 6.351912201159471e-06
+    }
+  },
+  "rows": [
+    {
+      "index": 630,
+      "altitude": 94.44444444444444,
+      "exact_objective": 0.393225210959103,
+      "exact_seconds": 0.4153666999991401,
+      "fast120": {
+        "solver": "FISTA/Dykstra 120",
+        "objective": 0.3933282719316063,
+        "gamma": 2.0877952325735754,
+        "relative_objective_error": 0.00026209146725845875,
+        "min_eigenvalue": 0.0001090619355560769,
+        "max_diagonal_error": 0.0
+      },
+      "fast500": {
+        "solver": "FISTA/Dykstra 500",
+        "objective": 0.39332495888235747,
+        "gamma": 2.0882633490435927,
+        "relative_objective_error": 0.0002536661446786799,
+        "min_eigenvalue": 0.00015663508062516233,
+        "max_diagonal_error": 0.0
+      }
+    },
+    {
+      "index": 774,
+      "altitude": 72.22222222222223,
+      "exact_objective": 0.455595750148851,
+      "exact_seconds": 0.186676899998929,
+      "fast120": {
+        "solver": "FISTA/Dykstra 120",
+        "objective": 0.4555957504957398,
+        "gamma": 1.5942782966612712,
+        "relative_objective_error": 7.613960300392112e-10,
+        "min_eigenvalue": 0.016745452098386543,
+        "max_diagonal_error": 0.0
+      },
+      "fast500": {
+        "solver": "FISTA/Dykstra 500",
+        "objective": 0.4555957501499035,
+        "gamma": 1.5942704369061436,
+        "relative_objective_error": 2.310143207000463e-12,
+        "min_eigenvalue": 0.016749309775356814,
+        "max_diagonal_error": 0.0
+      }
+    },
+    {
+      "index": 865,
+      "altitude": 150.0,
+      "exact_objective": 0.440734158005104,
+      "exact_seconds": 0.2593609999985347,
+      "fast120": {
+        "solver": "FISTA/Dykstra 120",
+        "objective": 0.4411159071664086,
+        "gamma": 1.965926309673983,
+        "relative_objective_error": 0.0008661664959949546,
+        "min_eigenvalue": 0.0006751520551242949,
+        "max_diagonal_error": 0.0
+      },
+      "fast500": {
+        "solver": "FISTA/Dykstra 500",
+        "objective": 0.44113358267205605,
+        "gamma": 1.9668037458325416,
+        "relative_objective_error": 0.0009062711834270969,
+        "min_eigenvalue": 0.0007987603188796328,
+        "max_diagonal_error": 0.0
+      }
+    },
+    {
+      "index": 46,
+      "altitude": 72.22222222222223,
+      "exact_objective": 0.27826443374424564,
+      "exact_seconds": 0.2408199000001332,
+      "fast120": {
+        "solver": "FISTA/Dykstra 120",
+        "objective": 0.2785253119285711,
+        "gamma": 1.9712833128365979,
+        "relative_objective_error": 0.0009375189664563395,
+        "min_eigenvalue": 0.00028468716923342685,
+        "max_diagonal_error": 0.0
+      },
+      "fast500": {
+        "solver": "FISTA/Dykstra 500",
+        "objective": 0.2784507513187545,
+        "gamma": 1.9680409703226565,
+        "relative_objective_error": 0.0006695702070215765,
+        "min_eigenvalue": 0.00030566378725172867,
+        "max_diagonal_error": 0.0
+      }
+    },
+    {
+      "index": 639,
+      "altitude": 161.1111111111111,
+      "exact_objective": 0.35894735814194006,
+      "exact_seconds": 0.19427250000080676,
+      "fast120": {
+        "solver": "FISTA/Dykstra 120",
+        "objective": 0.3589478358185769,
+        "gamma": 1.2674945520289946,
+        "relative_objective_error": 1.3307707272983848e-06,
+        "min_eigenvalue": 6.352807174919218e-06,
+        "max_diagonal_error": 0.0
+      },
+      "fast500": {
+        "solver": "FISTA/Dykstra 500",
+        "objective": 0.358947696663686,
+        "gamma": 1.2673693281365417,
+        "relative_objective_error": 9.43095800078307e-07,
+        "min_eigenvalue": 6.351912201159471e-06,
+        "max_diagonal_error": 0.0
+      }
+    },
+    {
+      "index": 345,
+      "altitude": 94.44444444444444,
+      "exact_objective": 0.3825933563505349,
+      "exact_seconds": 0.18423280000024533,
+      "fast120": {
+        "solver": "FISTA/Dykstra 120",
+        "objective": 0.38262747317294915,
+        "gamma": 2.1239210881309445,
+        "relative_objective_error": 8.917254272188194e-05,
+        "min_eigenvalue": 6.120698331421294e-05,
+        "max_diagonal_error": 0.0
+      },
+      "fast500": {
+        "solver": "FISTA/Dykstra 500",
+        "objective": 0.38262099675976335,
+        "gamma": 2.1243743071958496,
+        "relative_objective_error": 7.224487506039057e-05,
+        "min_eigenvalue": 3.456451785742947e-05,
+        "max_diagonal_error": 0.0
+      }
+    },
+    {
+      "index": 480,
+      "altitude": 183.33333333333331,
+      "exact_objective": 0.43698540492580384,
+      "exact_seconds": 0.26833719999922323,
+      "fast120": {
+        "solver": "FISTA/Dykstra 120",
+        "objective": 0.43764062647123947,
+        "gamma": 2.008429263667382,
+        "relative_objective_error": 0.001499412882100434,
+        "min_eigenvalue": 0.00016337782750223723,
+        "max_diagonal_error": 0.0
+      },
+      "fast500": {
+        "solver": "FISTA/Dykstra 500",
+        "objective": 0.4377650486837719,
+        "gamma": 2.0117941065949503,
+        "relative_objective_error": 0.0017841414133738635,
+        "min_eigenvalue": 0.000673661077694588,
+        "max_diagonal_error": 0.0
+      }
+    },
+    {
+      "index": 761,
+      "altitude": 116.66666666666666,
+      "exact_objective": 0.14153647538861455,
+      "exact_seconds": 0.23152339999978722,
+      "fast120": {
+        "solver": "FISTA/Dykstra 120",
+        "objective": 0.14156213937216827,
+        "gamma": 1.4538299830160781,
+        "relative_objective_error": 0.00018132416737985443,
+        "min_eigenvalue": 8.789790749185644e-05,
+        "max_diagonal_error": 0.0
+      },
+      "fast500": {
+        "solver": "FISTA/Dykstra 500",
+        "objective": 0.14155597134939965,
+        "gamma": 1.45795007466158,
+        "relative_objective_error": 0.00013774513411874125,
+        "min_eigenvalue": 0.0002405680791514505,
+        "max_diagonal_error": 0.0
+      }
+    },
+    {
+      "index": 751,
+      "altitude": 127.77777777777777,
+      "exact_objective": 0.2098683799705654,
+      "exact_seconds": 0.20526819999940926,
+      "fast120": {
+        "solver": "FISTA/Dykstra 120",
+        "objective": 0.21012947430702078,
+        "gamma": 1.5805912965485667,
+        "relative_objective_error": 0.0012440861100276278,
+        "min_eigenvalue": 0.0002443015968020487,
+        "max_diagonal_error": 0.0
+      },
+      "fast500": {
+        "solver": "FISTA/Dykstra 500",
+        "objective": 0.21005720665991168,
+        "gamma": 1.5890303314904595,
+        "relative_objective_error": 0.0008997386331983932,
+        "min_eigenvalue": 0.00042171576797897124,
+        "max_diagonal_error": 0.0
+      }
+    },
+    {
+      "index": 559,
+      "altitude": 83.33333333333334,
+      "exact_objective": 0.3070645150546649,
+      "exact_seconds": 0.2544577999997273,
+      "fast120": {
+        "solver": "FISTA/Dykstra 120",
+        "objective": 0.30726441946662625,
+        "gamma": 2.014424473756846,
+        "relative_objective_error": 0.0006510176271124623,
+        "min_eigenvalue": 0.0005296657795915459,
+        "max_diagonal_error": 0.0
+      },
+      "fast500": {
+        "solver": "FISTA/Dykstra 500",
+        "objective": 0.30721907986743735,
+        "gamma": 2.0184287736621966,
+        "relative_objective_error": 0.0005033626654806152,
+        "min_eigenvalue": 0.0007461281144662883,
+        "max_diagonal_error": 0.0
+      }
+    },
+    {
+      "index": 234,
+      "altitude": 127.77777777777777,
+      "exact_objective": 0.3701683780958557,
+      "exact_seconds": 0.25237379999998666,
+      "fast120": {
+        "solver": "FISTA/Dykstra 120",
+        "objective": 0.3701710881401092,
+        "gamma": 0.8925097895467163,
+        "relative_objective_error": 7.3211122663882895e-06,
+        "min_eigenvalue": 0.0010851199222227286,
+        "max_diagonal_error": 0.0
+      },
+      "fast500": {
+        "solver": "FISTA/Dykstra 500",
+        "objective": 0.3701707891464263,
+        "gamma": 0.8926357517819535,
+        "relative_objective_error": 6.513388807118428e-06,
+        "min_eigenvalue": 0.0010965708196530968,
+        "max_diagonal_error": 0.0
+      }
+    },
+    {
+      "index": 435,
+      "altitude": 183.33333333333331,
+      "exact_objective": 0.44759907218720396,
+      "exact_seconds": 0.2200777999987622,
+      "fast120": {
+        "solver": "FISTA/Dykstra 120",
+        "objective": 0.44819869626534203,
+        "gamma": 1.916878623588307,
+        "relative_objective_error": 0.0013396454894510717,
+        "min_eigenvalue": 0.00013050108377586446,
+        "max_diagonal_error": 0.0
+      },
+      "fast500": {
+        "solver": "FISTA/Dykstra 500",
+        "objective": 0.44826609827472946,
+        "gamma": 1.9164495772027446,
+        "relative_objective_error": 0.0014902311666243238,
+        "min_eigenvalue": 0.00018177183274285298,
+        "max_diagonal_error": 0.0
+      }
+    },
+    {
+      "index": 859,
+      "altitude": 116.66666666666666,
+      "exact_objective": 0.4052519405959396,
+      "exact_seconds": 0.40054179999970074,
+      "fast120": {
+        "solver": "FISTA/Dykstra 120",
+        "objective": 0.406118379928856,
+        "gamma": 2.1598550311093527,
+        "relative_objective_error": 0.002138026363654863,
+        "min_eigenvalue": 0.0009698784610801731,
+        "max_diagonal_error": 0.0
+      },
+      "fast500": {
+        "solver": "FISTA/Dykstra 500",
+        "objective": 0.406095783323426,
+        "gamma": 2.164550984031605,
+        "relative_objective_error": 0.0020822669627330657,
+        "min_eigenvalue": 0.0013582540903352576,
+        "max_diagonal_error": 0.0
+      }
+    },
+    {
+      "index": 5,
+      "altitude": 172.2222222222222,
+      "exact_objective": 0.5003983090408378,
+      "exact_seconds": 0.1746167000001151,
+      "fast120": {
+        "solver": "FISTA/Dykstra 120",
+        "objective": 0.5003983107377745,
+        "gamma": 1.7094735735627011,
+        "relative_objective_error": 3.391171935651554e-09,
+        "min_eigenvalue": 0.00841343381023678,
+        "max_diagonal_error": 0.0
+      },
+      "fast500": {
+        "solver": "FISTA/Dykstra 500",
+        "objective": 0.5003983090441931,
+        "gamma": 1.70954406915681,
+        "relative_objective_error": 6.705290494393575e-12,
+        "min_eigenvalue": 0.00864532575540108,
+        "max_diagonal_error": 0.0
+      }
+    },
+    {
+      "index": 42,
+      "altitude": 116.66666666666666,
+      "exact_objective": 0.17128670166589327,
+      "exact_seconds": 0.21564709999984188,
+      "fast120": {
+        "solver": "FISTA/Dykstra 120",
+        "objective": 0.17130237031744963,
+        "gamma": 1.8155156992888166,
+        "relative_objective_error": 9.147617067741596e-05,
+        "min_eigenvalue": 0.00030690534713786685,
+        "max_diagonal_error": 0.0
+      },
+      "fast500": {
+        "solver": "FISTA/Dykstra 500",
+        "objective": 0.1712949568389305,
+        "gamma": 1.8174528448422393,
+        "relative_objective_error": 4.8195061011439704e-05,
+        "min_eigenvalue": 0.00015763738479738154,
+        "max_diagonal_error": 0.0
+      }
+    },
+    {
+      "index": 983,
+      "altitude": 138.88888888888889,
+      "exact_objective": 0.16284761290545746,
+      "exact_seconds": 0.23065520000091055,
+      "fast120": {
+        "solver": "FISTA/Dykstra 120",
+        "objective": 0.1629921171998185,
+        "gamma": 1.510695548503665,
+        "relative_objective_error": 0.0008873589964436167,
+        "min_eigenvalue": 0.00012819186697660367,
+        "max_diagonal_error": 0.0
+      },
+      "fast500": {
+        "solver": "FISTA/Dykstra 500",
+        "objective": 0.16296401787820727,
+        "gamma": 1.5129460347998627,
+        "relative_objective_error": 0.000714809205200887,
+        "min_eigenvalue": 0.0001248436321781602,
+        "max_diagonal_error": 0.0
+      }
+    },
+    {
+      "index": 528,
+      "altitude": 138.88888888888889,
+      "exact_objective": 0.4453553555941322,
+      "exact_seconds": 0.2086704000012105,
+      "fast120": {
+        "solver": "FISTA/Dykstra 120",
+        "objective": 0.4453553563989444,
+        "gamma": 1.6012498694307868,
+        "relative_objective_error": 1.8071236974271068e-09,
+        "min_eigenvalue": 0.0009634141535498637,
+        "max_diagonal_error": 0.0
+      },
+      "fast500": {
+        "solver": "FISTA/Dykstra 500",
+        "objective": 0.44535535559680606,
+        "gamma": 1.6012053676992113,
+        "relative_objective_error": 6.0038822906712935e-12,
+        "min_eigenvalue": 0.001081463798660449,
+        "max_diagonal_error": 0.0
+      }
+    },
+    {
+      "index": 608,
+      "altitude": 138.88888888888889,
+      "exact_objective": 0.3743125076302847,
+      "exact_seconds": 0.20597479999923962,
+      "fast120": {
+        "solver": "FISTA/Dykstra 120",
+        "objective": 0.37496296254033046,
+        "gamma": 2.0933837894152103,
+        "relative_objective_error": 0.00173773223385912,
+        "min_eigenvalue": 0.0009874286658710892,
+        "max_diagonal_error": 0.0
+      },
+      "fast500": {
+        "solver": "FISTA/Dykstra 500",
+        "objective": 0.37495126896521924,
+        "gamma": 2.092177522204431,
+        "relative_objective_error": 0.0017064920939416858,
+        "min_eigenvalue": 0.0009833313918602964,
+        "max_diagonal_error": 0.0
+      }
+    },
+    {
+      "index": 735,
+      "altitude": 83.33333333333333,
+      "exact_objective": 0.39006125576442663,
+      "exact_seconds": 0.20694150000053924,
+      "fast120": {
+        "solver": "FISTA/Dykstra 120",
+        "objective": 0.39015715554036867,
+        "gamma": 1.6371078032343311,
+        "relative_objective_error": 0.00024585824540328326,
+        "min_eigenvalue": 6.468616315611633e-05,
+        "max_diagonal_error": 0.0
+      },
+      "fast500": {
+        "solver": "FISTA/Dykstra 500",
+        "objective": 0.3901392567618385,
+        "gamma": 1.6382420061115204,
+        "relative_objective_error": 0.00019997114878542483,
+        "min_eigenvalue": 8.780493171608832e-05,
+        "max_diagonal_error": 0.0
+      }
+    },
+    {
+      "index": 338,
+      "altitude": 72.22222222222223,
+      "exact_objective": 0.45542405823750837,
+      "exact_seconds": 0.19594549999965238,
+      "fast120": {
+        "solver": "FISTA/Dykstra 120",
+        "objective": 0.45543145118838885,
+        "gamma": 1.996449951875708,
+        "relative_objective_error": 1.6233114493536307e-05,
+        "min_eigenvalue": 4.328371676341131e-05,
+        "max_diagonal_error": 0.0
+      },
+      "fast500": {
+        "solver": "FISTA/Dykstra 500",
+        "objective": 0.4554288305585924,
+        "gamma": 1.9964526913214011,
+        "relative_objective_error": 1.0478851518084832e-05,
+        "min_eigenvalue": 2.8757578001653233e-05,
+        "max_diagonal_error": 0.0
+      }
+    }
+  ]
+}

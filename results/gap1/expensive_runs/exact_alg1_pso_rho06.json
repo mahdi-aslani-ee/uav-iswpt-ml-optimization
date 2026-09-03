@@ -1,0 +1,112 @@
+{
+  "rho": 0.6,
+  "angle_resolution_deg": 0.1,
+  "audit": {
+    "altitude": 127.0,
+    "objective": 0.39856324225319517,
+    "solve_seconds": 0.16418962300031126,
+    "fast_scan_center": 128.0,
+    "fast_scan_spacing_m": 2.0,
+    "exact_refine_spacing_m": 1.0
+  },
+  "exact_refinement_curve": [
+    {
+      "altitude": 120.0,
+      "objective": 0.4000071866096869,
+      "solve_seconds": 0.36335313400013547
+    },
+    {
+      "altitude": 121.0,
+      "objective": 0.39960295831081777,
+      "solve_seconds": 0.1580062729999554
+    },
+    {
+      "altitude": 122.0,
+      "objective": 0.3992711254596717,
+      "solve_seconds": 0.16799781400004576
+    },
+    {
+      "altitude": 123.0,
+      "objective": 0.3990077570219692,
+      "solve_seconds": 0.15554587899987382
+    },
+    {
+      "altitude": 124.0,
+      "objective": 0.3988089913947408,
+      "solve_seconds": 0.16548984200017003
+    },
+    {
+      "altitude": 125.0,
+      "objective": 0.3986710623468429,
+      "solve_seconds": 0.16151375800018286
+    },
+    {
+      "altitude": 126.0,
+      "objective": 0.3985903192346454,
+      "solve_seconds": 0.16130232299929048
+    },
+    {
+      "altitude": 127.0,
+      "objective": 0.39856324225319517,
+      "solve_seconds": 0.16418962300031126,
+      "fast_scan_center": 128.0,
+      "fast_scan_spacing_m": 2.0,
+      "exact_refine_spacing_m": 1.0
+    },
+    {
+      "altitude": 128.0,
+      "objective": 0.39858645343123844,
+      "solve_seconds": 0.16772098999990703
+    },
+    {
+      "altitude": 129.0,
+      "objective": 0.39865672401912555,
+      "solve_seconds": 0.1619534860001295
+    },
+    {
+      "altitude": 130.0,
+      "objective": 0.3987709788544843,
+      "solve_seconds": 0.15424258100028965
+    },
+    {
+      "altitude": 131.0,
+      "objective": 0.3989262982266495,
+      "solve_seconds": 0.16014498000004096
+    },
+    {
+      "altitude": 132.0,
+      "objective": 0.39911991769799515,
+      "solve_seconds": 0.18923618199914927
+    },
+    {
+      "altitude": 133.0,
+      "objective": 0.3993492262808064,
+      "solve_seconds": 0.21575635000044713
+    },
+    {
+      "altitude": 134.0,
+      "objective": 0.3996117633136311,
+      "solve_seconds": 0.16601938500025426
+    },
+    {
+      "altitude": 135.0,
+      "objective": 0.3999052143308477,
+      "solve_seconds": 0.17134185199938656
+    },
+    {
+      "altitude": 136.0,
+      "objective": 0.4002274061740455,
+      "solve_seconds": 0.15250830500008306
+    }
+  ],
+  "kang_algorithm1_exact_pso": {
+    "objective": 0.3985652075480599,
+    "altitude": 126.74716774834162,
+    "evaluations": 73,
+    "seed": 0,
+    "wall_seconds": 12.198577877000389,
+    "meaning": "Literal Kang Algorithm 1: Table 1 PSO and exact P2|h per evaluation"
+  },
+  "gap_pso_to_audit_percent": 0.0004930948608371436,
+  "total_seconds": 28.138964159000352
+}
